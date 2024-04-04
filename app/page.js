@@ -1,11 +1,14 @@
+import Link from "next/link";
+import "@/styles/globals.css";
+
 export default function Home() {
   return (
     <>
       <header>Movieing Box</header>
-      <div>Box Office</div>
+
       <div>
-        <div>Daily</div>
-        <div>Weekly</div>
+        <Link href={"/daily"}>Daily</Link>
+        <Link href={"/weekly"}>Weekly</Link>
       </div>
       <div>Search Movie</div>
       <div>Movie List</div>
