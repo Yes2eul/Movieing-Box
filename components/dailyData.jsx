@@ -28,12 +28,12 @@ const dailyData = () => {
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
-      <button onClick={fetchDaily}>검색</button>
+      <button onClick={fetchDaily}>확인</button>
 
       {boxOfficeData && (
         <div>
           {boxOfficeData.boxOfficeResult?.dailyBoxOfficeList.length === 0 ? (
-            <p>해당 일에 데이터가 없습니다.</p>
+            <p>검색 결과가 없습니다.</p>
           ) : (
             <table>
               <thead>

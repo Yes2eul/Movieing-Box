@@ -25,3 +25,14 @@ export const GetWeeklyBoxOffice = async (date, weekGb) => {
     throw error;
   }
 };
+
+export const GetMovieList = async (movieNm) => {
+  const url = `http://kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.json?key=${apiKey}&movieNm=${movieNm}`;
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};

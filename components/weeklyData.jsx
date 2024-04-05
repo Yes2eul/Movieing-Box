@@ -34,12 +34,12 @@ const WeeklyData = () => {
         <option value="1">주말 (금~일)</option>
         <option value="2">주중 (월~목)</option>
       </select>
-      <button onClick={fetchWeekly}>검색</button>
+      <button onClick={fetchWeekly}>확인</button>
 
       {boxOfficeData && (
         <div>
           {boxOfficeData.boxOfficeResult?.weeklyBoxOfficeList.length === 0 ? (
-            <p>해당 주에 데이터가 없습니다.</p>
+            <p>검색 결과가 없습니다.</p>
           ) : (
             <table>
               <thead>
