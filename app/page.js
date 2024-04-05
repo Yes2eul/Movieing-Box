@@ -1,10 +1,11 @@
 import Link from "next/link";
 import "@/styles/globals.css";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
     <>
-      <header>Movieing Box</header>
+      <Header />
 
       <div>
         <Link href={"/daily"}>Daily</Link>

@@ -1,7 +1,13 @@
-import React from "react";
+import Header from "@/components/header";
+import WeeklyData from "@/components/weeklyData";
 
-const weeklyBoxOffice = () => {
-  return <div>weekly box office</div>;
+const WeeklyBoxOffice = () => {
+  return (
+    <>
+      <Header />
+      <WeeklyData />
+    </>
+  );
 };
 
-export default weeklyBoxOffice;
+export default WeeklyBoxOffice;
