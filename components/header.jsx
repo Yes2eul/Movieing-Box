@@ -4,7 +4,7 @@ import Link from "next/link";
 const header = () => {
   return (
     <Link href={"/"}>
-      <h1>Movieing Box</h1>
+      <main>Movieing Box</main>
     </Link>
   );
 };

@@ -1,6 +1,6 @@
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { GlobalStyle } from "@/styles/globalStyle";
+import StyledComponentsRegistry from "./registry";
+import Header from "@/components/header";
 
 export const metadata = {
   title: "Movieing Box",
@@ -9,8 +9,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ko">
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyle />
+          <Header />
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
