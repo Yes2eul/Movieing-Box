@@ -11,7 +11,7 @@ const dailyData = () => {
     try {
       const data = await GetDailyBoxOffice(date);
       setBoxOfficeData(data);
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.error(error);
     }
@@ -19,6 +19,7 @@ const dailyData = () => {
 
   return (
     <>
+      <label>Daily</label>
       <input
         type="text"
         placeholder="YYYMMDD"
@@ -32,7 +33,7 @@ const dailyData = () => {
       {boxOfficeData && (
         <div>
           {boxOfficeData.boxOfficeResult?.dailyBoxOfficeList.length === 0 ? (
-            <p>해당 날짜에 데이터가 없습니다.</p>
+            <p>해당 일에 데이터가 없습니다.</p>
           ) : (
             <table>
               <thead>

@@ -14,8 +14,8 @@ export const GetDailyBoxOffice = async (date) => {
   }
 };
 
-export const GetWeeklyBoxOffice = async (date) => {
-  // const url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=${apiKey}&targetDt=${date}`;
+export const GetWeeklyBoxOffice = async (date, weekGb) => {
+  const url = `http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=${apiKey}&targetDt=${date}&weekGb=${weekGb}`;
 
   try {
     const response = await axios.get(url);

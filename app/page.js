@@ -11,6 +11,7 @@ export default function Home() {
         <Link href={"/daily"}>Daily</Link>
         <Link href={"/weekly"}>Weekly</Link>
       </div>
+
       <div>Search Movie</div>
       <div>Movie List</div>
       <div>Movie Info</div>
