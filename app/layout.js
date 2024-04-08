@@ -2,6 +2,7 @@ import { GlobalStyle } from "@/styles/globalStyle";
 import StyledComponentsRegistry from "./registry";
 import Header from "@/components/header";
 import { Container } from "@/styles/styles";
+import NavBar from "@/components/navBar";
 
 export const metadata = {
   title: "Movieing Box",
@@ -16,7 +17,10 @@ export default function RootLayout({ children }) {
           <Container>
             <GlobalStyle />
             <Header />
-            {children}
+            <div style={{ display: "flex" }}>
+              <NavBar />
+              <main style={{ flex: 1 }}>{children}</main>
+            </div>
           </Container>
         </StyledComponentsRegistry>
       </body>

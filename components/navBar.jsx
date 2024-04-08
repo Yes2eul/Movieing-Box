@@ -1,39 +1,71 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import MenuIcon from "@/public/menu.svg";
+import LightIcon from "@/public/light.svg";
+import Image from "next/image";
 
-const navBar = () => {
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <NavBarContainer>
       <ul>
         <li>
-          <Link href={"/daily"}>Daily</Link>
+          <Image src={MenuIcon} alt="Menu" onClick={toggleMenu} />
         </li>
-        <li>
-          <Link href={"/weekly"}>Weekly</Link>
-        </li>
-        <li>
-          <Link href={"/search"}>Search</Link>
-        </li>
+        {isMenuOpen && (
+          <>
+            <li>
+              <Link href={"/daily"}>Daily</Link>
+            </li>
+            <li>
+              <Link href={"/weekly"}>Weekly</Link>
+            </li>
+            <li>
+              <Link href={"/search"}>Search</Link>
+            </li>
+            <li>
+              <Image src={LightIcon} alt="Light" />
+            </li>
+          </>
+        )}
       </ul>
     </NavBarContainer>
   );
 };
 
-export default navBar;
+export default NavBar;
 
 const NavBarContainer = styled.div`
+  width: 100px;
+  height: 100vh;
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
   }
+
   li {
-    margin-bottom: 20px;
+    margin: 10px 0;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .menu-icon,
+  .light-icon {
+    cursor: pointer;
   }
 `;

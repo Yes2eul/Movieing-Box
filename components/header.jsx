@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import NavBar from "@/components/navBar";
 
 const header = () => {
   return (
@@ -11,7 +10,6 @@ const header = () => {
       <Link href={"/"}>
         <TitleStyled>Movieing Box</TitleStyled>
       </Link>
-      <NavBar />
     </>
   );
 };
