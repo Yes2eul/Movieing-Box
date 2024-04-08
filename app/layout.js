@@ -1,7 +1,7 @@
 import { GlobalStyle } from "@/styles/globalStyle";
 import StyledComponentsRegistry from "./registry";
 import Header from "@/components/header";
-import { Container } from "@/styles/styles";
+import { Box, Container } from "@/styles/styles";
 import NavBar from "@/components/navBar";
 
 export const metadata = {
@@ -14,13 +14,13 @@ export default function RootLayout({ children }) {
     <html lang="ko">
       <body>
         <StyledComponentsRegistry>
+          <GlobalStyle />
           <Container>
-            <GlobalStyle />
             <Header />
-            <div style={{ display: "flex" }}>
+            <Box>
               <NavBar />
-              <main style={{ flex: 1 }}>{children}</main>
-            </div>
+              {children}
+            </Box>
           </Container>
         </StyledComponentsRegistry>
       </body>

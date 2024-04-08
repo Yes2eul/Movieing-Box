@@ -11,13 +11,7 @@ export const Container = styled.div`
 
 export const Box = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-`;
-
-export const Content = styled.div`
-  text-align: center;
 `;
 
 export const InputStyled = styled.input`

@@ -7,7 +7,7 @@ import MenuIcon from "@/public/menu.svg";
 import LightIcon from "@/public/light.svg";
 import Image from "next/image";
 
-const NavBar = () => {
+const navBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -41,10 +41,10 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default navBar;
 
 const NavBarContainer = styled.div`
-  width: 100px;
+  width: 200px;
   height: 100vh;
 
   ul {
@@ -57,7 +57,7 @@ const NavBarContainer = styled.div`
   }
 
   li {
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
   a:hover {
