@@ -21,6 +21,7 @@ const dailyData = () => {
   return (
     <>
       <label>Daily Box Office</label>
+
       <InputStyled
         type="text"
         placeholder="YYYMMDD"

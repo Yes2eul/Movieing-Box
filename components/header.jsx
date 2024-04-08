@@ -3,18 +3,22 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import NavBar from "@/components/navBar";
 
 const header = () => {
   return (
-    <Link href={"/"}>
-      <MainStyled>Movieing Box</MainStyled>
-    </Link>
+    <>
+      <Link href={"/"}>
+        <TitleStyled>Movieing Box</TitleStyled>
+      </Link>
+      <NavBar />
+    </>
   );
 };
 
 export default header;
 
-const MainStyled = styled.main`
+const TitleStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -5,6 +5,19 @@ import styled from "styled-components";
 export const Container = styled.div`
   height: 100vh;
   width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+export const Content = styled.div`
+  text-align: center;
 `;
 
 export const InputStyled = styled.input`

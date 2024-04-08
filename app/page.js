@@ -1,11 +1,12 @@
-import Link from "next/link";
+import React from "react";
+import { Box, Content } from "@/styles/styles";
 
 export default function Home() {
   return (
-    <>
-      <Link href={"/daily"}>Daily</Link>
-      <Link href={"/weekly"}>Weekly</Link>
-      <Link href={"/search"}>Search</Link>
-    </>
+    <Box>
+      <Content>
+        <h1>Welcome, Movieing Box!!</h1>
+      </Content>
+    </Box>
   );
 }

@@ -11,13 +11,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <Container>
+      <body>
         <StyledComponentsRegistry>
-          <GlobalStyle />
-          <Header />
-          {children}
+          <Container>
+            <GlobalStyle />
+            <Header />
+            {children}
+          </Container>
         </StyledComponentsRegistry>
-      </Container>
+      </body>
     </html>
   );
 }
