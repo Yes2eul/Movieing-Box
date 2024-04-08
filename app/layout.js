@@ -1,6 +1,7 @@
 import { GlobalStyle } from "@/styles/globalStyle";
 import StyledComponentsRegistry from "./registry";
 import Header from "@/components/header";
+import { Container } from "@/styles/styles";
 
 export const metadata = {
   title: "Movieing Box",
@@ -10,13 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body>
+      <Container>
         <StyledComponentsRegistry>
           <GlobalStyle />
           <Header />
           {children}
         </StyledComponentsRegistry>
-      </body>
+      </Container>
     </html>
   );
 }

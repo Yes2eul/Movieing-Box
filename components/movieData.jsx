@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import { GetMovieList } from "./api";
+import { ButtonStyled, InputStyled } from "@/styles/styles";
 
-const searchMovie = () => {
+const movieData = () => {
   const [movieTitle, setMovieTitle] = useState("");
   const [movieList, setMovieList] = useState([]);
 
@@ -20,15 +21,13 @@ const searchMovie = () => {
   return (
     <>
       <label>Search</label>
-      <input
+      <InputStyled
         type="text"
         placeholder="영화 제목"
-        id="title"
-        name="title"
         value={movieTitle}
         onChange={(e) => setMovieTitle(e.target.value)}
       />
-      <button onClick={fetchMovieList}>검색</button>
+      <ButtonStyled onClick={fetchMovieList}>검색</ButtonStyled>
 
       {movieList.length > 0 && (
         <div>
@@ -68,4 +67,4 @@ const searchMovie = () => {
   );
 };
 
-export default searchMovie;
+export default movieData;

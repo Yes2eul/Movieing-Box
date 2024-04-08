@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { GetDailyBoxOffice } from "./api";
+import { ButtonStyled, InputStyled } from "@/styles/styles";
 
 const dailyData = () => {
   const [date, setDate] = useState("");
@@ -19,8 +20,8 @@ const dailyData = () => {
 
   return (
     <>
-      <label>Daily</label>
-      <input
+      <label>Daily Box Office</label>
+      <InputStyled
         type="text"
         placeholder="YYYMMDD"
         id="date"
@@ -28,7 +29,7 @@ const dailyData = () => {
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
-      <button onClick={fetchDaily}>확인</button>
+      <ButtonStyled onClick={fetchDaily}>확인</ButtonStyled>
 
       {boxOfficeData && (
         <div>

@@ -2,6 +2,12 @@
 
 import React, { useState } from "react";
 import { GetWeeklyBoxOffice } from "./api";
+import {
+  ButtonStyled,
+  InputStyled,
+  OptionStyled,
+  SelectStyled,
+} from "@/styles/styles";
 
 const WeeklyData = () => {
   const [date, setDate] = useState("");
@@ -20,8 +26,8 @@ const WeeklyData = () => {
 
   return (
     <>
-      <label>Weekly</label>
-      <input
+      <label>Weekly Box Office</label>
+      <InputStyled
         type="text"
         placeholder="YYYMMDD"
         id="date"
@@ -29,12 +35,14 @@ const WeeklyData = () => {
         value={date}
         onChange={(e) => setDate(e.target.value)}
       />
-      <select value={weekGb} onChange={(e) => setWeekGb(e.target.value)}>
-        <option value="0">주간 (월~일)</option>
-        <option value="1">주말 (금~일)</option>
-        <option value="2">주중 (월~목)</option>
-      </select>
-      <button onClick={fetchWeekly}>확인</button>
+
+      <SelectStyled value={weekGb} onChange={(e) => setWeekGb(e.target.value)}>
+        <OptionStyled value="0">주간 (월~일)</OptionStyled>
+        <OptionStyled value="1">주말 (금~일)</OptionStyled>
+        <OptionStyled value="2">주중 (월~목)</OptionStyled>
+      </SelectStyled>
+
+      <ButtonStyled onClick={fetchWeekly}>확인</ButtonStyled>
 
       {boxOfficeData && (
         <div>
